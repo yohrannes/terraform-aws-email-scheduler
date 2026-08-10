@@ -14,7 +14,9 @@ crash.*.log
 # control as they are data points which are potentially sensitive and subject
 # to change depending on the environment.
 *.tfvars
+!example.tfvars
 *.tfvars.json
+plan
 
 # Ignore override files as they are usually used to override resources locally and so
 # are not checked in
@@ -42,3 +44,17 @@ terraform.rc
 # Optional: ignore plan files saved before destroying Terraform configuration
 # Uncomment the line below if you want to ignore planout files.
 # planout
+
+# Python cache & build artifacts
+venv/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment & credentials
+.env
+.env.*
+token-google-api.json
+client_secret.json
+credentials*.json
