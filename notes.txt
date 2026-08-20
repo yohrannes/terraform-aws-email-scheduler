@@ -6,6 +6,7 @@
 ## Test process
 
 cd ias/terraform/
+terraform init -backend-config="environments/dev/backend.hcl"
 terraform apply -var-file=<tfvar-file-path>
 terraform destroy -var-file=<var-file-dir>
 aws lambda invoke --function-name <function-name> --cli-binary-format raw-in-base64-out --profile terraform --payload '{}' /dev/stdout
